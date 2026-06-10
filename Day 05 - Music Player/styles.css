@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --black: #1c2b2d;
+  --pink: #ffc0cb;
+  --hover: #e5acb6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  gap: 2rem;
+  max-width: 34rem;
+}
+
+.song-image {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.song-image img {
+  width: 24rem;
+}
+
+.menu {
+  background-color: var(--pink);
+  padding: 1.25rem 1.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-menu {
+  background-color: var(--pink);
+  padding: 1.75rem 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.control-play {
+  background-color: var(--pink);
+  padding: 2.25rem 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#customRange {
+  -webkit-appearance: none;
+  background: var(--pink);
+  height: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.control-play:hover,
+.menu:hover,
+.control-menu:hover {
+  background-color: var(--hover);
+}
+
+#customRange::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Removes default styling for WebKit browsers */
+  appearance: none;
+  width: 14px; /* Custom width of the thumb */
+  height: 14px; /* Custom height of the thumb */
+  background: var(--black); /* Custom color of the thumb */
+  border-radius: 50%; /* Rounded thumb */
+  cursor: pointer; /* Changes cursor type on hover */
+}
