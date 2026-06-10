@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Mood → Gradient</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <h1>Mood → Gradient</h1>
+      <p class="sub">Type a vibe. Get a gradient. Instant atmosphere.</p>
+
+      <form id="form">
+        <input
+          id="mood"
+          type="text"
+          placeholder="e.g. calm rainy night"
+          autocomplete="off"
+        />
+        <button id="btn" type="submit">Generate</button>
+      </form>
+
+      <div class="palette" id="palette">
+        <div class="row">
+          <div class="color-box" id="box1"><span id="c1">#------</span></div>
+          <div class="color-box" id="box2"><span id="c2">#------</span></div>
+          <div class="color-box" id="box3"><span id="c3">#------</span></div>
+        </div>
+
+        <div class="grad-box" id="gradBox">
+          <span id="gradText"
+            >linear-gradient(135deg, #------, #------, #------);</span
+          >
+        </div>
+      </div>
+
+      <div id="msg" class="msg"></div>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
