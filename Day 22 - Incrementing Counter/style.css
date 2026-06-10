@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f7f2ef;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+}
+
+.counter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.name {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 560px) {
+  body {
+    flex-direction: column;
+  }
+}
