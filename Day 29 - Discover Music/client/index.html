@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Music</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <div class="bg-orb bg-orb-1"></div>
+      <div class="bg-orb bg-orb-2"></div>
+      <div class="noise-layer"></div>
+
+      <section class="glass app-card">
+        <div class="hero">
+          <div class="hero-top">
+            <span class="status-pill">AI Music Discovery</span>
+          </div>
+
+          <h1>Discover Music</h1>
+          <p class="subtitle">
+            Describe what you want to hear in plain English and get real Spotify
+            results matched to your mood, vibe, and intent.
+          </p>
+        </div>
+
+        <form id="music-form" class="search-form">
+          <div class="field field-lg">
+            <label for="prompt">What do you want to hear?</label>
+            <textarea
+              id="prompt"
+              name="prompt"
+              rows="4"
+              placeholder='Try: "dreamy electronic stuff for a rainy night, less mainstream"'
+              required
+            ></textarea>
+          </div>
+
+          <div class="controls-grid">
+            <div class="field">
+              <label for="type">Type</label>
+              <div class="select-wrap">
+                <select id="type" name="type">
+                  <option value="best_match">Best match</option>
+                  <option value="trending">Trending</option>
+                  <option value="fresh_finds">Fresh finds</option>
+                  <option value="deep_cuts">Deep cuts</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="era">Era</label>
+              <div class="select-wrap">
+                <select id="era" name="era">
+                  <option value="any">Any era</option>
+                  <option value="late_90s">Late 90s</option>
+                  <option value="2000s">2000s</option>
+                  <option value="early_2010s">Early 2010s</option>
+                  <option value="late_2010s">Late 2010s</option>
+                  <option value="2020s">2020s</option>
+                  <option value="recent">Recent</option>
+                  <option value="very_recent">Very recent</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="discoveryLevel">Discovery level</label>
+              <div class="select-wrap">
+                <select id="discoveryLevel" name="discoveryLevel">
+                  <option value="balanced">Balanced</option>
+                  <option value="familiar">Familiar</option>
+                  <option value="exploratory">Exploratory</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button id="submit-btn" class="submit-btn" type="submit">
+              Explore
+            </button>
+          </div>
+        </form>
+
+        <div id="error-box" class="glass error-box hidden"></div>
+
+        <section id="results" class="results hidden">
+          <div class="recommendations-panel">
+            <div class="recommendations-top">
+              <p class="results-kicker">Recommendations</p>
+              <h2 class="recommendations-title">Spotify matches</h2>
+            </div>
+
+            <div id="recommendations" class="recommendations-grid"></div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
