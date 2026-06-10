@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Room Styler</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Room Decor</p>
+          <h1>Redesign your space.</h1>
+        </div>
+        <div class="model-pill">GPT mini</div>
+      </header>
+
+      <section class="workspace">
+        <form id="roomForm" class="control-panel">
+          <div class="panel-intro">
+            <h2>Input</h2>
+            <p>Upload a room photo and describe the new direction.</p>
+          </div>
+
+          <div class="panel-section">
+            <label for="roomImage">Room photo</label>
+            <label class="upload-zone" for="roomImage">
+              <span class="upload-icon">+</span>
+              <span class="upload-title">Choose an image</span>
+              <span id="fileName" class="upload-detail">PNG, JPG, or WEBP</span>
+            </label>
+            <input type="file" id="roomImage" accept="image/*" required />
+          </div>
+
+          <div class="panel-section">
+            <label for="prompt">Design direction</label>
+            <textarea
+              id="prompt"
+              rows="8"
+              placeholder="Modern, calm, natural light, low-profile furniture, sculptural lamp, plants, textured rug, and a cleaner layout."
+              required
+            ></textarea>
+          </div>
+
+          <div class="suggestions" aria-label="Prompt ideas">
+            <button type="button" data-prompt="Redesign this room in Japandi style with low-profile furniture, light oak, soft neutrals, handmade ceramics, linen textures, calm natural light, and a balanced uncluttered layout.">
+              Japandi
+            </button>
+            <button type="button" data-prompt="Redesign this room in an organic modern style with sculptural rounded furniture, natural stone, warm wood, woven textures, indoor greenery, soft daylight, and a grounded refined palette.">
+              Organic Modern
+            </button>
+            <button type="button" data-prompt="Redesign this room in a quiet luxury style with tailored furniture, layered neutral materials, elegant lighting, subtle art, premium textiles, and a calm high-end hotel atmosphere.">
+              Quiet Luxury
+            </button>
+          </div>
+
+          <button type="submit" id="submitBtn" class="primary-action">
+            Generate
+          </button>
+        </form>
+
+        <div class="preview-grid">
+          <article class="preview-panel">
+            <div class="preview-header">
+              <h2>Before</h2>
+              <span>Source</span>
+            </div>
+            <div class="image-frame">
+              <p id="originalEmpty" class="empty-state">Upload a room photo to begin.</p>
+              <img id="originalPreview" alt="Original room" />
+            </div>
+          </article>
+
+          <article class="preview-panel">
+            <div class="preview-header">
+              <h2>After</h2>
+              <span>Result</span>
+            </div>
+            <div class="image-frame">
+              <p id="editedEmpty" class="empty-state">Your redesign will appear here.</p>
+              <div id="loading" class="loading hidden">
+                <span></span>
+                Generating image...
+              </div>
+              <img id="editedPreview" alt="Edited room" />
+            </div>
+            <p id="statusMessage" class="status hidden"></p>
+            <p id="errorMessage" class="error hidden"></p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
