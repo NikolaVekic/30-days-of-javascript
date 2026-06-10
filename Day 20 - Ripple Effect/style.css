@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --btn-bg: #222;
+  --btn-border: #00ffe1;
+  --btn-text: #00ffe1;
+  --ripple: rgba(0, 255, 225, 0.3);
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+button.ripple {
+  position: relative;
+  padding: 0.75em 2em;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border: 2px solid var(--btn-border);
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 25px 40px;
+}
+
+button.ripple .circle {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-color: var(--ripple);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
