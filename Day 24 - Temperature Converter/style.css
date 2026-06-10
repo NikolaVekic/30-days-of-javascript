@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --clr-card: #ffffff;
+  --text-main: #008888;
+  --color-secondary: rgba(0, 136, 136, 0.85);
+  --input-bg: #b9edc9;
+  --clr-bg: linear-gradient(135deg, #acd9e3 0%, #9fe3bc 45%, #91ed93 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--clr-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Open Sans", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.card {
+  background: var(--clr-card);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 18px 30px 30px 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card h1 {
+  padding-bottom: 16px;
+  color: var(--text-main);
+}
+
+.inner-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}
+
+.input-column {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-column label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.input-column input {
+  padding: 6px;
+  border-radius: 4px;
+  border: 0px;
+  box-shadow: 1px 1px 1px 0px;
+  background-color: var(--input-bg);
+  color: var(--text-main);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+input:focus,
+input:focus-visible {
+  outline: none;
+  border-color: var(--text-main);
+}
