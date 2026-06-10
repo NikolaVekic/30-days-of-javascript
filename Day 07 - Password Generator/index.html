@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <!-- FONTAWESOME -->
+    <script
+      src="https://kit.fontawesome.com/aa5a9e5011.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-light">
+    <!-- BOOTSTRAP -->
+    <div class="container">
+      <h1 class="display-2">
+        Generate a <br />
+        <span class="text-success font-weight-bold">random password</span>
+      </h1>
+      <div class="display">
+        <div>
+          <div class="input-group mb-3 w-50 py-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Recipient's password"
+              aria-label="Recipient's password"
+              aria-describedby="basic-addon2"
+              style="padding: 1.75rem 0.75rem; font-size: 1.5rem"
+              id="password"
+            />
+            <div class="input-group-append">
+              <button class="btn btn-outline-success" type="button" id="copy">
+                <i class="fa-solid fa-copy fa-lg"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="alert alert-success w-25 d-none" id="alert" role="alert">
+          Succesfully copied password to clipboard
+        </div>
+        <button
+          class="btn btn-success"
+          type="button"
+          style="font-size: 1.5rem"
+          id="generate"
+        >
+          Generate
+        </button>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
