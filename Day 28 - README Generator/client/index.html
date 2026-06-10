@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>READMEForge</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="background-blur bg-1"></div>
+    <div class="background-blur bg-2"></div>
+
+    <main class="app">
+      <header class="hero glass">
+        <p class="eyebrow">AI README Generator</p>
+        <h1>READMEForge</h1>
+        <p class="hero-text">
+          Turn rough project details into a clean professional README.md
+        </p>
+      </header>
+
+      <section class="grid">
+        <div class="panel glass">
+          <h2>Project Details</h2>
+
+          <form id="readme-form" class="form">
+            <div class="field">
+              <label for="projectName">Project Name</label>
+              <input type="text" id="projectName" name="projectName" required />
+            </div>
+
+            <div class="field">
+              <label for="description">Description</label>
+              <textarea
+                id="description"
+                name="description"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="techStack">Tech Stack</label>
+              <input
+                type="text"
+                id="techStack"
+                name="techStack"
+                placeholder="React, Node.js, MongoDB"
+              />
+            </div>
+
+            <div class="field">
+              <label for="features">Features</label>
+              <textarea
+                id="features"
+                name="features"
+                rows="3"
+                placeholder="Authentication, dashboard, search..."
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="installation">Installation</label>
+              <textarea
+                id="installation"
+                name="installation"
+                rows="3"
+                placeholder="npm install, npm run dev"
+              ></textarea>
+            </div>
+
+            <div class="field">
+              <label for="usage">Usage</label>
+              <textarea
+                id="usage"
+                name="usage"
+                rows="3"
+                placeholder="Explain how to use the app"
+              ></textarea>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="license">License</label>
+                <input
+                  type="text"
+                  id="license"
+                  name="license"
+                  placeholder="MIT"
+                />
+              </div>
+
+              <div class="field">
+                <label for="tone">Tone</label>
+                <select id="tone" name="tone">
+                  <option value="Professional">Professional</option>
+                  <option value="Friendly">Friendly</option>
+                  <option value="Minimal">Minimal</option>
+                  <option value="Technical">Technical</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="submit" class="generate-btn">Generate README</button>
+          </form>
+        </div>
+
+        <div class="panel glass output-panel">
+          <div class="output-header">
+            <h2>Generated README</h2>
+            <div class="output-actions">
+              <button id="copyBtn" type="button" class="secondary-btn">
+                Copy
+              </button>
+              <button id="downloadBtn" type="button" class="secondary-btn">
+                Download
+              </button>
+            </div>
+          </div>
+
+          <div id="status" class="status">
+            Fill the form and generate your README.
+          </div>
+
+          <pre id="output" class="output-box">
+# Your README will appear here...</pre
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
