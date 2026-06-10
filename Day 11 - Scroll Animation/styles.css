@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  background-color: white;
+  border: 2px solid black;
+  padding: 2.5rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  opacity: 0;
+  transform: translateX(200%);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-200%);
+}
+
+.box.show {
+  opacity: 1; /* Show the boxes */
+  transform: translateX(0); /* Move the boxes into view */
+}
+
+.image {
+  width: 20rem;
+  height: 18rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 1rem;
+}
+
+.text span,
+p {
+  font-size: 1.2rem;
+}
+
+.classes {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
