@@ -2,12 +2,6 @@
 
 A collection of 30 small JavaScript projects created to practice DOM manipulation, APIs, animations, UI interactions, and full-stack development.
 
-## What Changed
-
-- Refocused the challenge into a collection of 30 completed projects.
-- Removed the previous Git history and rebuilt it with one commit per project.
-- Named each project commit after the app it introduces.
-
 ## Projects
 
 - **Day 01 - [Cards](./Day%2001%20-%20Cards/)** - Expandable image cards with smooth transitions.
